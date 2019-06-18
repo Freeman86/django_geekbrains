@@ -1,19 +1,21 @@
-﻿
-import random
 
-nums = [random.randint(2, 99) for _ in range(10)]
+print("разработка".encode(), '\n', "сокет".encode(), '\n',
+      "декоратор".encode())
 
-digits = [2, 3, 4, 5, 6, 7, 8, 9, ]
-count = 0
-count_gen = []
+print(b'\xd1\x80\xd0\xb0\xd0\xb7\xd1\x80\xd0\xb0\xd0\xb1\xd0\xbe\xd1\x82\xd0\xba\xd0\xb0'.decode(), '\n',
+      b'\xd1\x81\xd0\xbe\xd0\xba\xd0\xb5\xd1\x82'.decode(), '\n',
+      b'\xd0\xb4\xd0\xb5\xd0\xba\xd0\xbe\xd1\x80\xd0\xb0\xd1\x82\xd0\xbe\xd1\x80'.decode())
 
-for i in range(len(digits)):
-    digit = digits[i]
-    count = 0
-    for j in range(len(nums)):
-        if nums[j] % digit == 0:
-            count += 1
-    count_gen.append(count)
-    print(f' Число {digits[i]} кратно {count_gen[i]}')
+print("разработка".encode('utf-8'), '\n', "сокет".encode('utf-8'), '\n',
+      "декоратор".encode('utf-8'))
 
+print(b'\xd1\x80\xd0\xb0\xd0\xb7\xd1\x80\xd0\xb0\xd0\xb1\xd0\xbe\xd1\x82\xd0\xba\xd0\xb0'.decode('utf-8'), '\n',
+      b'\xd1\x81\xd0\xbe\xd0\xba\xd0\xb5\xd1\x82'.decode('utf-8'), '\n',
+      b'\xd0\xb4\xd0\xb5\xd0\xba\xd0\xbe\xd1\x80\xd0\xb0\xd1\x82\xd0\xbe\xd1\x80'.decode('utf-8'))
 
+print(b'\xd1\x80\xd0\xb0\xd0\xb7\xd1\x80\xd0\xb0\xd0\xb1\xd0\xbe\xd1\x82\xd0\xba\xd0\xb0'.decode('latin-1'), '\n',
+      b'\xd1\x81\xd0\xbe\xd0\xba\xd0\xb5\xd1\x82'.decode('latin-1'), '\n',
+      b'\xd0\xb4\xd0\xb5\xd0\xba\xd0\xbe\xd1\x80\xd0\xb0\xd1\x82\xd0\xbe\xd1\x80'.decode('latin-1'))
+
+print('ÑÐ°Ð·ÑÐ°Ð±Ð¾ÑÐºÐ°'.encode('latin-1'), '\n',
+      'ÑÐ¾ÐºÐµÑ'.encode('utf-8'))
